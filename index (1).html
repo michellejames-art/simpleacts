@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Simple Acts of Kindness CIC provides essential household items to women and families fleeing domestic abuse in Wolverhampton. 500+ families helped, 24-hour turnaround.">
+  <meta property="og:title" content="Simple Acts of Kindness CIC — Wolverhampton">
+  <meta property="og:description" content="We provide beds, furniture and household essentials to families fleeing domestic abuse. Home starts with the simple things.">
+  <meta property="og:type" content="website">
+  <title>Simple Acts of Kindness CIC — Home starts with the simple things</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@2.47.0/tabler-icons.min.css">
+  <style>
+    :root {
+      --purple: #5B2D8E;
+      --purple-dark: #3D1C63;
+      --purple-mid: #7B4DB5;
+      --purple-light: #F0EAF8;
+      --yellow: #F5C518;
+      --white: #FAFAF7;
+      --text: #1A0A2E;
+      --muted: #6B5A82;
+      --border: rgba(91,45,142,0.15);
+      --green: #1a4a2e;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; background: #f3f0f8; color: var(--text); -webkit-font-smoothing: antialiased; }
+
+    /* ── SITE WRAPPER ── */
+    .site { max-width: 900px; margin: 0 auto; background: var(--white); overflow: hidden; box-shadow: 0 4px 40px rgba(91,45,142,0.1); }
+
+    /* ── NAV ── */
+    nav { background: #fff; height: 64px; display: flex; align-items: center; justify-content: space-between; padding: 0 32px; border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 100; }
+    .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+    .nav-logo svg { width: 34px; height: 34px; }
+    .nav-logo-text { font-size: 13px; font-weight: 600; color: var(--purple-dark); line-height: 1.3; }
+    .nav-links { display: flex; align-items: center; gap: 8px; }
+    .nav-link { font-size: 13px; font-weight: 500; color: var(--text); text-decoration: none; padding: 6px 12px; border-radius: 20px; transition: background 0.15s; }
+    .nav-link:hover { background: var(--purple-light); color: var(--purple); }
+    .nav-link.active { color: var(--purple); }
+    .nav-cta { background: var(--purple); color: #fff; font-size: 13px; font-weight: 500; padding: 8px 20px; border-radius: 24px; text-decoration: none; margin-left: 8px; transition: background 0.15s; }
+    .nav-cta:hover { background: var(--purple-dark); }
+
+    /* ── PAGES ── */
+    .page { display: none; }
+    .page.active { display: block; }
+
+    /* ── HERO ── */
+    .hero { background: linear-gradient(150deg, var(--purple-dark) 0%, var(--purple) 55%, var(--purple-mid) 100%); padding: 56px 40px 0; overflow: hidden; }
+    .hero-inner { display: flex; align-items: flex-end; gap: 20px; }
+    .hero-text { flex: 1; padding-bottom: 48px; }
+    .hero-illus { width: 220px; flex-shrink: 0; }
+    .hero-tag { display: inline-block; background: var(--yellow); color: var(--purple-dark); font-size: 10px; font-weight: 600; padding: 4px 14px; border-radius: 20px; margin-bottom: 20px; letter-spacing: 0.06em; text-transform: uppercase; }
+    .hero h1 { font-family: 'Playfair Display', Georgia, serif; color: #fff; font-size: 36px; font-weight: 500; line-height: 1.2; margin-bottom: 12px; }
+    .hero h1 span { color: var(--yellow); }
+    .hero-sub { color: rgba(255,255,255,0.68); font-size: 13px; font-style: italic; font-family: 'Playfair Display', Georgia, serif; margin-bottom: 18px; }
+    .hero p { color: rgba(255,255,255,0.78); font-size: 14px; line-height: 1.75; max-width: 380px; margin-bottom: 28px; }
+    .hero-btns { display: flex; gap: 12px; flex-wrap: wrap; }
+    .btn-yellow { background: var(--yellow); color: var(--purple-dark); font-size: 13px; font-weight: 600; padding: 11px 24px; border-radius: 24px; border: none; cursor: pointer; font-family: inherit; text-decoration: none; display: inline-block; transition: opacity 0.15s; }
+    .btn-yellow:hover { opacity: 0.9; }
+    .btn-white-outline { background: transparent; color: #fff; font-size: 13px; font-weight: 500; padding: 11px 24px; border-radius: 24px; border: 1px solid rgba(255,255,255,0.4); cursor: pointer; font-family: inherit; text-decoration: none; display: inline-block; transition: border-color 0.15s; }
+    .btn-white-outline:hover { border-color: rgba(255,255,255,0.8); }
+
+    .hero-stats { display: flex; border-top: 1px solid rgba(255,255,255,0.12); background: rgba(0,0,0,0.15); margin-top: 0; }
+    .hero-stat { flex: 1; padding: 20px 8px; text-align: center; border-right: 1px solid rgba(255,255,255,0.08); }
+    .hero-stat:last-child { border-right: none; }
+    .hero-stat-num { color: var(--yellow); font-size: 22px; font-weight: 600; line-height: 1; }
+    .hero-stat-label { color: rgba(255,255,255,0.5); font-size: 10px; margin-top: 4px; line-height: 1.3; }
+
+    /* ── SECTIONS ── */
+    .section { padding: 48px 40px; }
+    .section-alt { background: var(--purple-light); }
+    .section-green { background: var(--green); }
+    .section-yellow { background: var(--yellow); }
+    .label { font-size: 10px; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 600; color: var(--purple); margin-bottom: 10px; }
+    .label-green { color: #7ecfa0; }
+    h2 { font-family: 'Playfair Display', Georgia, serif; font-size: 26px; font-weight: 500; color: var(--text); margin-bottom: 14px; line-height: 1.3; }
+    h2.white { color: #fff; }
+    .body-text { font-size: 14px; color: var(--muted); line-height: 1.75; margin-bottom: 24px; }
+
+    /* CARDS */
+    .card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 14px; margin-top: 24px; }
+    .card { background: #fff; border: 0.5px solid var(--border); border-radius: 12px; padding: 22px 18px; }
+    .card-icon { width: 38px; height: 38px; background: var(--purple-light); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 14px; }
+    .card-icon i { font-size: 20px; color: var(--purple); }
+    .card h3 { font-size: 14px; font-weight: 600; color: var(--text); margin-bottom: 6px; }
+    .card p { font-size: 12px; color: var(--muted); line-height: 1.6; margin: 0; }
+
+    /* IMPACT BAR */
+    .impact-stats { display: flex; flex-direction: column; gap: 16px; }
+    .impact-row { display: flex; align-items: flex-start; gap: 16px; }
+    .impact-pct { font-size: 36px; font-weight: 600; color: var(--purple-dark); line-height: 1; flex-shrink: 0; width: 80px; }
+    .impact-desc { font-size: 13px; color: var(--purple-dark); line-height: 1.55; padding-top: 8px; }
+    .impact-divider { height: 0.5px; background: rgba(61,28,99,0.2); }
+    .impact-title { font-family: 'Playfair Display', Georgia, serif; font-size: 17px; font-weight: 500; color: var(--purple-dark); margin-bottom: 20px; }
+
+    /* SUSTAIN STATS */
+    .sustain-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 28px; }
+    .sustain-card { background: rgba(255,255,255,0.08); border: 0.5px solid rgba(255,255,255,0.15); border-radius: 12px; padding: 20px; }
+    .sustain-num { font-size: 28px; font-weight: 600; color: #7ecfa0; line-height: 1; margin-bottom: 6px; }
+    .sustain-label { font-size: 12px; color: rgba(255,255,255,0.7); line-height: 1.4; }
+    .sustain-pillars { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+    .pillar { background: rgba(255,255,255,0.06); border-radius: 8px; padding: 16px 12px; text-align: center; }
+    .pillar i { font-size: 24px; color: #7ecfa0; display: block; margin-bottom: 8px; }
+    .pillar h4 { font-size: 12px; font-weight: 600; color: #fff; margin-bottom: 4px; }
+    .pillar p { font-size: 11px; color: rgba(255,255,255,0.6); line-height: 1.5; margin: 0; }
+
+    /* PARTNER TILES */
+    .partner-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 20px; }
+    .partner-tile { background: #fff; border: 0.5px solid var(--border); border-radius: 8px; padding: 14px 10px; display: flex; flex-direction: column; align-items: center; gap: 5px; min-height: 72px; justify-content: center; }
+    .partner-tile i { font-size: 20px; color: var(--purple); opacity: 0.5; }
+    .partner-tile .pname { font-size: 11px; font-weight: 600; color: var(--text); text-align: center; line-height: 1.3; }
+    .partner-tile .ptype { font-size: 9px; color: var(--muted); }
+    .partner-cta-box { background: var(--purple-light); border-radius: 8px; padding: 20px; text-align: center; }
+    .partner-cta-box p { font-size: 13px; color: var(--text); margin: 0 0 14px; }
+    .partner-cta-box strong { color: var(--purple); }
+
+    /* SUPPORT WAYS */
+    .support-grid { display: flex; flex-direction: column; gap: 14px; margin-top: 24px; }
+    .support-card { background: #fff; border: 0.5px solid var(--border); border-radius: 12px; padding: 22px; display: flex; gap: 18px; align-items: flex-start; cursor: pointer; transition: border-color 0.15s; text-decoration: none; }
+    .support-card:hover { border-color: var(--purple); }
+    .support-icon { width: 46px; height: 46px; background: var(--purple-light); border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .support-icon i { font-size: 22px; color: var(--purple); }
+    .support-tag { display: inline-block; font-size: 10px; padding: 2px 10px; border-radius: 20px; margin-bottom: 6px; font-weight: 500; }
+    .tag-money { background: #FEF9E7; color: #A0780A; }
+    .tag-items { background: #EAF3DE; color: #3B6D11; }
+    .tag-biz { background: var(--purple-light); color: var(--purple); }
+    .support-card h3 { font-size: 15px; font-weight: 600; color: var(--text); margin-bottom: 5px; }
+    .support-card p { font-size: 13px; color: var(--muted); line-height: 1.6; margin: 0; }
+
+    /* EVENTS */
+    .event-card { background: #fff; border: 0.5px solid var(--border); border-radius: 12px; margin-bottom: 12px; display: flex; overflow: hidden; }
+    .event-date { background: var(--purple); color: #fff; width: 66px; flex-shrink: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 16px 8px; }
+    .eday { font-size: 26px; font-weight: 600; line-height: 1; }
+    .emon { font-size: 9px; text-transform: uppercase; letter-spacing: 0.08em; margin-top: 3px; opacity: 0.8; }
+    .eyr { font-size: 9px; opacity: 0.55; margin-top: 2px; }
+    .event-body { padding: 16px 20px; flex: 1; }
+    .etype { display: inline-block; font-size: 9px; text-transform: uppercase; letter-spacing: 0.07em; font-weight: 600; padding: 2px 8px; border-radius: 20px; margin-bottom: 6px; }
+    .et-fund { background: #FEF9E7; color: #A0780A; }
+    .et-comm { background: var(--purple-light); color: var(--purple); }
+    .et-aware { background: #EAF3DE; color: #3B6D11; }
+    .et-corp { background: #FEF0F0; color: #9B2C2C; }
+    .event-body h4 { font-size: 14px; font-weight: 600; color: var(--text); margin-bottom: 4px; }
+    .event-body p { font-size: 12px; color: var(--muted); line-height: 1.5; margin: 0 0 8px; }
+    .event-meta { display: flex; gap: 12px; flex-wrap: wrap; }
+    .event-meta span { font-size: 11px; color: var(--muted); display: flex; align-items: center; gap: 4px; }
+    .event-meta i { font-size: 13px; color: var(--purple); }
+
+    /* CONTACT PAGE */
+    .contact-hero { background: linear-gradient(135deg, var(--purple-dark) 0%, var(--purple-mid) 100%); padding: 56px 40px; }
+    .contact-hero h1 { font-family: 'Playfair Display', Georgia, serif; color: #fff; font-size: 32px; font-weight: 500; margin-bottom: 12px; }
+    .contact-hero p { color: rgba(255,255,255,0.72); font-size: 14px; line-height: 1.7; max-width: 480px; }
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 32px; }
+    .contact-card { background: #fff; border: 0.5px solid var(--border); border-radius: 12px; padding: 28px; }
+    .contact-card h3 { font-size: 16px; font-weight: 600; color: var(--text); margin-bottom: 8px; }
+    .contact-card p { font-size: 13px; color: var(--muted); line-height: 1.65; margin-bottom: 18px; }
+    .contact-card .btn-purple { background: var(--purple); color: #fff; font-size: 13px; font-weight: 500; padding: 10px 22px; border-radius: 24px; text-decoration: none; display: inline-block; transition: background 0.15s; }
+    .contact-card .btn-purple:hover { background: var(--purple-dark); }
+    .contact-detail { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 16px; }
+    .contact-detail i { font-size: 20px; color: var(--purple); margin-top: 1px; flex-shrink: 0; }
+    .contact-detail h4 { font-size: 13px; font-weight: 600; color: var(--text); margin-bottom: 2px; }
+    .contact-detail p { font-size: 12px; color: var(--muted); margin: 0; line-height: 1.5; }
+    .urgent-box { background: #FEF0F0; border: 0.5px solid rgba(155,44,44,0.2); border-radius: 12px; padding: 20px; margin-top: 24px; }
+    .urgent-box h4 { font-size: 13px; font-weight: 600; color: #9B2C2C; margin-bottom: 6px; }
+    .urgent-box p { font-size: 12px; color: #7a2222; line-height: 1.6; margin: 0; }
+    .urgent-box a { color: #9B2C2C; font-weight: 600; }
+
+    /* FOOTER */
+    footer { background: var(--purple-dark); padding: 36px 40px 24px; }
+    .footer-inner { display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 32px; margin-bottom: 24px; }
+    footer h4 { color: var(--yellow); font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 12px; }
+    footer p, footer a { color: rgba(255,255,255,0.55); font-size: 12px; line-height: 1.9; text-decoration: none; display: block; }
+    footer a:hover { color: rgba(255,255,255,0.85); }
+    .footer-bottom { border-top: 0.5px solid rgba(255,255,255,0.1); padding-top: 16px; text-align: center; }
+    .footer-bottom p { font-size: 10px; color: rgba(255,255,255,0.3); }
+
+    /* RESPONSIVE */
+    @media (max-width: 640px) {
+      nav { padding: 0 20px; }
+      .nav-links { display: none; }
+      .hero { padding: 40px 24px 0; }
+      .hero-illus { display: none; }
+      .hero h1 { font-size: 28px; }
+      .section { padding: 36px 24px; }
+      .contact-hero { padding: 40px 24px; }
+      .contact-grid { grid-template-columns: 1fr; }
+      .sustain-pillars { grid-template-columns: 1fr; }
+      .partner-grid { grid-template-columns: 1fr 1fr; }
+      .footer-inner { grid-template-columns: 1fr; gap: 20px; }
+      footer { padding: 32px 24px 20px; }
+      .sustain-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+<div class="site">
+
+  <!-- NAV -->
+  <nav>
+    <a class="nav-logo" href="#" onclick="showPage('home')">
+      <svg viewBox="0 0 32 36" fill="none">
+        <ellipse cx="16" cy="14" rx="13" ry="12" fill="#5B2D8E" opacity="0.12"/>
+        <circle cx="16" cy="14" r="9" fill="#5B2D8E" opacity="0.2"/>
+        <ellipse cx="16" cy="14" rx="6" ry="8" fill="#F5C518" opacity="0.75"/>
+        <line x1="16" y1="22" x2="16" y2="34" stroke="#5B2D8E" stroke-width="2.5" stroke-linecap="round"/>
+        <line x1="10" y1="28" x2="16" y2="25" stroke="#5B2D8E" stroke-width="1.5" stroke-linecap="round"/>
+        <line x1="22" y1="27" x2="16" y2="25" stroke="#5B2D8E" stroke-width="1.5" stroke-linecap="round"/>
+        <circle cx="13" cy="10" r="1.2" fill="#3D1C63"/>
+        <circle cx="18" cy="8" r="1.2" fill="#3D1C63"/>
+        <circle cx="16" cy="13" r="1.2" fill="#3D1C63"/>
+        <circle cx="12" cy="15" r="1" fill="#3D1C63"/>
+        <circle cx="20" cy="13" r="1" fill="#3D1C63"/>
+      </svg>
+      <span class="nav-logo-text">Simple Acts of Kindness</span>
+    </a>
+    <div class="nav-links">
+      <a class="nav-link active" href="#" onclick="showPage('home')">Home</a>
+      <a class="nav-link" href="#" onclick="showPage('contact')">Contact us</a>
+      <a class="nav-cta" href="https://www.facebook.com/simpleactsofkindnesscic" target="_blank" rel="noopener">Get in touch</a>
+    </div>
+  </nav>
+
+  <!-- ═══════════════ HOME PAGE ═══════════════ -->
+  <div class="page active" id="page-home">
+
+    <!-- HERO -->
+    <div class="hero">
+      <div class="hero-inner">
+        <div class="hero-text">
+          <div class="hero-tag">Wolverhampton · Since 2018</div>
+          <h1>Home starts with<br>the <span>simple things.</span></h1>
+          <div class="hero-sub">Supporting families fleeing domestic abuse across Wolverhampton.</div>
+          <p>We provide essential household items — beds, cutlery, clothing — to women and children who leave with nothing. Within 24 hours of a referral, we help turn an empty house into a home.</p>
+          <div class="hero-btns">
+            <a class="btn-yellow" href="#" onclick="showPage('contact')">Support us</a>
+            <a class="btn-white-outline" href="https://www.facebook.com/simpleactsofkindnesscic" target="_blank" rel="noopener">Find us on Facebook</a>
+          </div>
+        </div>
+        <div class="hero-illus">
+          <svg viewBox="0 0 210 200" width="210" height="200" xmlns="http://www.w3.org/2000/svg">
+            <g opacity="0.45"><polyline points="28,95 60,68 92,95" fill="none" stroke="white" stroke-width="2" stroke-linejoin="round"/><rect x="34" y="95" width="52" height="42" rx="1" fill="none" stroke="white" stroke-width="2"/><rect x="52" y="116" width="14" height="21" rx="2" fill="none" stroke="white" stroke-width="1.5"/><rect x="38" y="102" width="10" height="10" rx="1" fill="none" stroke="white" stroke-width="1.5"/><line x1="43" y1="102" x2="43" y2="112" stroke="white" stroke-width="1"/><line x1="38" y1="107" x2="48" y2="107" stroke="white" stroke-width="1"/><rect x="70" y="72" width="7" height="14" rx="1" fill="none" stroke="white" stroke-width="1.5"/></g>
+            <g opacity="0.9"><polyline points="108,88 150,53 192,88" fill="none" stroke="white" stroke-width="2.5" stroke-linejoin="round"/><rect x="116" y="88" width="68" height="52" rx="1" fill="none" stroke="white" stroke-width="2.5"/><rect x="142" y="112" width="16" height="28" rx="2" fill="none" stroke="white" stroke-width="2"/><circle cx="156" cy="127" r="1.5" fill="white"/><rect x="122" y="97" width="12" height="12" rx="1" fill="none" stroke="white" stroke-width="1.5"/><line x1="128" y1="97" x2="128" y2="109" stroke="white" stroke-width="1"/><line x1="122" y1="103" x2="134" y2="103" stroke="white" stroke-width="1"/><rect x="166" y="97" width="12" height="12" rx="1" fill="none" stroke="white" stroke-width="1.5"/><line x1="172" y1="97" x2="172" y2="109" stroke="white" stroke-width="1"/><line x1="166" y1="103" x2="178" y2="103" stroke="white" stroke-width="1"/><rect x="172" y="58" width="8" height="18" rx="1" fill="none" stroke="white" stroke-width="2"/></g>
+            <line x1="18" y1="140" x2="200" y2="140" stroke="white" stroke-width="1.5" opacity="0.2" stroke-linecap="round"/>
+            <circle cx="147" cy="151" r="6.5" fill="none" stroke="white" stroke-width="2"/><circle cx="147" cy="145" r="3.5" fill="none" stroke="white" stroke-width="1.5"/><line x1="147" y1="158" x2="147" y2="176" stroke="white" stroke-width="2" stroke-linecap="round"/><path d="M147 170 L140 183 M147 170 L154 183" fill="none" stroke="white" stroke-width="2" stroke-linecap="round"/><path d="M147 162 L139 168" fill="none" stroke="white" stroke-width="2" stroke-linecap="round"/><path d="M147 162 L157 167" fill="none" stroke="white" stroke-width="2" stroke-linecap="round"/>
+            <circle cx="136" cy="158" r="5" fill="none" stroke="white" stroke-width="1.8"/><path d="M132 154 Q129 151 131 148" fill="none" stroke="white" stroke-width="1.2" stroke-linecap="round"/><path d="M140 154 Q143 151 141 148" fill="none" stroke="white" stroke-width="1.2" stroke-linecap="round"/><line x1="136" y1="163" x2="136" y2="177" stroke="white" stroke-width="1.8" stroke-linecap="round"/><line x1="136" y1="177" x2="131" y2="186" stroke="white" stroke-width="1.8" stroke-linecap="round"/><line x1="136" y1="177" x2="141" y2="186" stroke="white" stroke-width="1.8" stroke-linecap="round"/><line x1="136" y1="167" x2="130" y2="172" stroke="white" stroke-width="1.5" stroke-linecap="round"/><line x1="136" y1="167" x2="142" y2="172" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+            <circle cx="159" cy="161" r="4.5" fill="none" stroke="white" stroke-width="1.8"/><path d="M155 158 Q154 153 159 152 Q164 153 163 158" fill="none" stroke="white" stroke-width="1.2"/><line x1="159" y1="165" x2="159" y2="178" stroke="white" stroke-width="1.8" stroke-linecap="round"/><line x1="159" y1="178" x2="154" y2="187" stroke="white" stroke-width="1.8" stroke-linecap="round"/><line x1="159" y1="178" x2="164" y2="187" stroke="white" stroke-width="1.8" stroke-linecap="round"/><line x1="159" y1="169" x2="153" y2="174" stroke="white" stroke-width="1.5" stroke-linecap="round"/><line x1="159" y1="169" x2="165" y2="173" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+            <path d="M147 143 Q147 140 144 140 Q141 140 141 143 Q141 146 147 150 Q153 146 153 143 Q153 140 150 140 Q147 140 147 143Z" fill="none" stroke="white" stroke-width="1.2" opacity="0.55"/>
+          </svg>
+        </div>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat"><div class="hero-stat-num">500+</div><div class="hero-stat-label">Families helped</div></div>
+        <div class="hero-stat"><div class="hero-stat-num">6+</div><div class="hero-stat-label">Years running</div></div>
+        <div class="hero-stat"><div class="hero-stat-num">24hr</div><div class="hero-stat-label">Turnaround</div></div>
+        <div class="hero-stat"><div class="hero-stat-num">&lt;2%</div><div class="hero-stat-label">Social housing comes furnished</div></div>
+      </div>
+    </div>
+
+    <!-- WHAT WE DO -->
+    <div class="section">
+      <div class="label">What we do</div>
+      <h2>The simple things that make a home</h2>
+      <p class="body-text">When a family escapes domestic abuse, they often leave with nothing. No cutlery. No bedding. No way to cook a meal. We hold donated items across two storage units and can deliver a full household starter kit within 24 hours of a referral.</p>
+      <div class="card-grid">
+        <div class="card"><div class="card-icon"><i class="ti ti-bed"></i></div><h3>Beds & bedding</h3><p>Mattresses, frames, duvets and pillows so a family can sleep safely on night one.</p></div>
+        <div class="card"><div class="card-icon"><i class="ti ti-tools-kitchen-2"></i></div><h3>Kitchen essentials</h3><p>Pots, pans, cutlery, plates — everything needed to cook a first meal at home.</p></div>
+        <div class="card"><div class="card-icon"><i class="ti ti-shirt"></i></div><h3>Clothing & toiletries</h3><p>Clean clothes and personal care items, sorted by size for adults and children.</p></div>
+        <div class="card"><div class="card-icon"><i class="ti ti-sofa"></i></div><h3>Furniture</h3><p>Sofas, tables, chairs — so families have somewhere to sit together.</p></div>
+      </div>
+    </div>
+
+    <!-- IMPACT BAR -->
+    <div class="section section-yellow">
+      <p class="impact-title">The scale of the problem</p>
+      <div class="impact-stats">
+        <div class="impact-row">
+          <div class="impact-pct">98%</div>
+          <div class="impact-desc">of social housing allocated to domestic abuse survivors has no flooring, no white goods, and no furniture</div>
+        </div>
+        <div class="impact-divider"></div>
+        <div class="impact-row">
+          <div class="impact-pct">95%</div>
+          <div class="impact-desc">of domestic abuse survivors have experienced financial abuse, leaving them with no funds to provide basic household items</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SUPPORT US -->
+    <div class="section section-alt">
+      <div class="label">Get involved</div>
+      <h2>There are many ways you can help</h2>
+      <div class="support-grid">
+        <a class="support-card" href="#" onclick="showPage('contact')">
+          <div class="support-icon"><i class="ti ti-heart"></i></div>
+          <div>
+            <div class="support-tag tag-money">Cash donation</div>
+            <h3>Donate money</h3>
+            <p>£10 covers a cutlery set. £50 provides a full bedding pack. £100 equips a complete starter kit for a family starting over.</p>
+          </div>
+        </a>
+        <a class="support-card" href="#" onclick="showPage('contact')">
+          <div class="support-icon"><i class="ti ti-package"></i></div>
+          <div>
+            <div class="support-tag tag-items">Item donation</div>
+            <h3>Donate household items</h3>
+            <p>We accept good-condition furniture, beds, kitchen goods, clothing, and toiletries. We collect from Wolverhampton and surrounding areas.</p>
+          </div>
+        </a>
+        <a class="support-card" href="#" onclick="showPage('contact')">
+          <div class="support-icon"><i class="ti ti-building"></i></div>
+          <div>
+            <div class="support-tag tag-biz">For businesses</div>
+            <h3>Business partnership</h3>
+            <p>Partner with us through staff fundraising, surplus stock donations, or workplace giving. We provide CSR credentials and a verified partnership certificate.</p>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <!-- SUSTAINABILITY -->
+    <div class="section section-green">
+      <div class="label label-green">Sustainability</div>
+      <h2 class="white">Good for families.<br>Good for the planet.</h2>
+      <p style="color:rgba(255,255,255,0.7);font-size:14px;line-height:1.75;margin-bottom:28px;">Every item we redistribute is one less piece of furniture heading to landfill. Our model turns surplus donations into lifelines — a circular approach to two urgent problems at once.</p>
+      <div class="sustain-grid">
+        <div class="sustain-card"><div class="sustain-num">22m</div><div class="sustain-label">Pieces of furniture sent to UK landfill every year</div></div>
+        <div class="sustain-card"><div class="sustain-num">14m</div><div class="sustain-label">People in the UK affected by furniture poverty</div></div>
+        <div class="sustain-card"><div class="sustain-num">&lt;2%</div><div class="sustain-label">Of social housing tenancies come furnished</div></div>
+        <div class="sustain-card"><div class="sustain-num">1m</div><div class="sustain-label">Children in the UK without a bed to sleep in</div></div>
+      </div>
+      <div class="sustain-pillars">
+        <div class="pillar"><i class="ti ti-recycle"></i><h4>Reduce waste</h4><p>Donated items are checked and redistributed — not sent to skip.</p></div>
+        <div class="pillar"><i class="ti ti-truck"></i><h4>Local logistics</h4><p>We serve Wolverhampton, keeping transport miles low.</p></div>
+        <div class="pillar"><i class="ti ti-leaf"></i><h4>Circular giving</h4><p>Businesses donate surplus. Families get what they need. Nothing wasted.</p></div>
+      </div>
+    </div>
+
+    <!-- WHO WE WORK WITH -->
+    <div class="section">
+      <div class="label">Who we work with</div>
+      <h2>Trusted by organisations across the region</h2>
+      <p class="body-text">We work alongside housing associations, domestic abuse services, local authorities, and community organisations to reach families quickly and effectively.</p>
+      <div class="partner-grid">
+        <div class="partner-tile"><i class="ti ti-building-community"></i><div class="pname">Wolverhampton City Council</div><div class="ptype">Local authority</div></div>
+        <div class="partner-tile"><i class="ti ti-home-heart"></i><div class="pname">WV Living</div><div class="ptype">Housing association</div></div>
+        <div class="partner-tile"><i class="ti ti-shield-heart"></i><div class="pname">WISH</div><div class="ptype">DA support service</div></div>
+        <div class="partner-tile"><i class="ti ti-users"></i><div class="pname">Refuge</div><div class="ptype">National charity</div></div>
+        <div class="partner-tile"><i class="ti ti-building-hospital"></i><div class="pname">Royal Wolverhampton NHS</div><div class="ptype">Health trust</div></div>
+        <div class="partner-tile"><i class="ti ti-school"></i><div class="pname">Social services</div><div class="ptype">Children & families</div></div>
+      </div>
+      <div class="partner-cta-box">
+        <p><strong>Want to become a referral partner?</strong> If you work with families experiencing domestic abuse, we'd love to hear from you.</p>
+        <a href="#" onclick="showPage('contact')" class="btn-yellow" style="font-size:12px;padding:8px 20px;">Get in touch →</a>
+      </div>
+    </div>
+
+    <!-- EVENTS -->
+    <div class="section section-alt">
+      <div class="label">Events</div>
+      <h2>Join us and make a difference</h2>
+      <p class="body-text">From community fundraisers to corporate awareness days — our events bring people together around a cause that matters.</p>
+      <div class="event-card"><div class="event-date"><div class="eday">12</div><div class="emon">Jul</div><div class="eyr">2026</div></div><div class="event-body"><span class="etype et-fund">Fundraiser</span><h4>Summer Charity Quiz Night</h4><p>Test your knowledge and raise money for families in Wolverhampton. Teams of up to 6, prizes for the winners.</p><div class="event-meta"><span><i class="ti ti-map-pin"></i> Wolverhampton city centre</span><span><i class="ti ti-clock"></i> 7:00pm – 10:00pm</span><span><i class="ti ti-ticket"></i> £10 per person</span></div></div></div>
+      <div class="event-card"><div class="event-date"><div class="eday">24</div><div class="emon">Jul</div><div class="eyr">2026</div></div><div class="event-body"><span class="etype et-comm">Community</span><h4>Donation Drive — Storage Unit Open Day</h4><p>Drop off unwanted household items directly at our storage unit. Furniture, kitchen goods, bedding, and clothing welcome.</p><div class="event-meta"><span><i class="ti ti-map-pin"></i> SAK Storage, Wolverhampton</span><span><i class="ti ti-clock"></i> 10:00am – 3:00pm</span><span><i class="ti ti-free-rights"></i> Free entry</span></div></div></div>
+      <div class="event-card"><div class="event-date"><div class="eday">14</div><div class="emon">Aug</div><div class="eyr">2026</div></div><div class="event-body"><span class="etype et-aware">Awareness</span><h4>Domestic Abuse Awareness Breakfast</h4><p>A morning session for HR professionals and business leaders on recognising domestic abuse in the workplace.</p><div class="event-meta"><span><i class="ti ti-map-pin"></i> Wolverhampton Business Hub</span><span><i class="ti ti-clock"></i> 8:30am – 10:30am</span><span><i class="ti ti-free-rights"></i> Free to attend</span></div></div></div>
+      <div style="margin-top:8px;">
+        <a href="#" onclick="showPage('contact')" class="btn-yellow" style="font-size:12px;padding:9px 22px;">Enquire about events →</a>
+      </div>
+    </div>
+
+  </div><!-- end home page -->
+
+  <!-- ═══════════════ CONTACT PAGE ═══════════════ -->
+  <div class="page" id="page-contact">
+
+    <div class="contact-hero">
+      <div style="display:flex;gap:6px;align-items:center;margin-bottom:14px;">
+        <span style="font-size:11px;color:rgba(255,255,255,0.45);cursor:pointer;" onclick="showPage('home')">Home</span>
+        <span style="font-size:11px;color:rgba(255,255,255,0.45);">›</span>
+        <span style="font-size:11px;color:var(--yellow);">Contact us</span>
+      </div>
+      <h1>Get in touch</h1>
+      <p>Whether you need our help, want to donate, or are interested in partnering with us — we'd love to hear from you. We aim to respond to all enquiries within 24 hours.</p>
+    </div>
+
+    <div class="section">
+
+      <div class="contact-grid">
+
+        <div class="contact-card">
+          <h3>I need help or want to make a referral</h3>
+          <p>If you are a survivor, a support worker, housing officer, or social worker looking to refer a family to us, please reach out via Facebook Messenger or email. We respond within 24 hours.</p>
+          <a href="https://www.facebook.com/simpleactsofkindnesscic" target="_blank" rel="noopener" class="btn-purple">Message us on Facebook →</a>
+        </div>
+
+        <div class="contact-card">
+          <h3>I want to donate or support</h3>
+          <p>To donate money, arrange a collection of household items, discuss a business partnership, or find out about sponsorship — get in touch and we'll come back to you quickly.</p>
+          <a href="https://www.facebook.com/simpleactsofkindnesscic" target="_blank" rel="noopener" class="btn-purple">Get in touch →</a>
+        </div>
+
+      </div>
+
+      <div style="margin-top:32px;">
+        <div class="label">Our details</div>
+        <div style="margin-top:20px;display:flex;flex-direction:column;gap:16px;">
+          <div class="contact-detail">
+            <i class="ti ti-map-pin"></i>
+            <div><h4>Location</h4><p>Wolverhampton, West Midlands</p></div>
+          </div>
+          <div class="contact-detail">
+            <i class="ti ti-brand-facebook"></i>
+            <div><h4>Facebook</h4><p><a href="https://www.facebook.com/simpleactsofkindnesscic" target="_blank" rel="noopener" style="color:var(--purple);font-weight:500;">@simpleactsofkindnesscic</a></p></div>
+          </div>
+          <div class="contact-detail">
+            <i class="ti ti-clock"></i>
+            <div><h4>Response time</h4><p>We aim to respond to all enquiries within 24 hours</p></div>
+          </div>
+          <div class="contact-detail">
+            <i class="ti ti-building"></i>
+            <div><h4>Registered</h4><p>Simple Acts of Kindness CIC · Registered in England & Wales</p></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="urgent-box">
+        <h4>⚠ If you are in immediate danger</h4>
+        <p>Please call <strong>999</strong> immediately. For the National Domestic Abuse Helpline, call <a href="tel:08082000247">0808 2000 247</a> (free, 24 hours). We are not an emergency service, but we are here to help once you are safe.</p>
+      </div>
+
+    </div>
+  </div><!-- end contact page -->
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div>
+        <h4>Simple Acts of Kindness CIC</h4>
+        <p>Home starts with the simple things.</p>
+        <p style="margin-top:8px;">Helping families in Wolverhampton rebuild after domestic abuse. CIC registered in England & Wales.</p>
+      </div>
+      <div>
+        <h4>Navigate</h4>
+        <a href="#" onclick="showPage('home')">Home</a>
+        <a href="#" onclick="showPage('contact')">Contact us</a>
+        <a href="https://www.facebook.com/simpleactsofkindnesscic" target="_blank" rel="noopener">Facebook</a>
+      </div>
+      <div>
+        <h4>Get help</h4>
+        <p>National DA Helpline</p>
+        <a href="tel:08082000247">0808 2000 247</a>
+        <p style="margin-top:6px;font-size:10px;opacity:0.6;">Free · 24 hours · Confidential</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Simple Acts of Kindness CIC · Registered in England · Wolverhampton, West Midlands</p>
+    </div>
+  </footer>
+
+</div><!-- end site -->
+
+<script>
+function showPage(id) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
+  document.getElementById('page-' + id).classList.add('active');
+  if (id === 'home') document.querySelector('.nav-link[onclick*="home"]').classList.add('active');
+  if (id === 'contact') document.querySelector('.nav-link[onclick*="contact"]').classList.add('active');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+</script>
+</body>
+</html>
