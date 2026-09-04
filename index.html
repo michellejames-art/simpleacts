@@ -99,7 +99,7 @@
     /* PARTNER GRID — now 4 cols to fit 8 partners */
     .partner-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-bottom: 20px; }
     .partner-tile { background: #fff; border: 0.5px solid var(--border); border-radius: 8px; padding: 14px 10px; display: flex; flex-direction: column; align-items: center; gap: 5px; min-height: 72px; justify-content: center; }
-    .partner-tile i { font-size: 20px; color: var(--purple); opacity: 0.5; }
+    .partner-initial { width: 44px; height: 44px; background: var(--purple); color: #fff; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 700; letter-spacing: 0.03em; }
     .partner-tile .pname { font-size: 10px; font-weight: 600; color: var(--text); text-align: center; line-height: 1.3; }
     .partner-tile .ptype { font-size: 9px; color: var(--muted); text-align: center; }
     .partner-cta-box { background: var(--purple-light); border-radius: 8px; padding: 20px; text-align: center; }
@@ -281,10 +281,10 @@
       <h2>The simple things that make a home</h2>
       <p class="body-text">When a family escapes domestic abuse, they often leave with nothing. No cutlery. No bedding. No way to cook a meal. We hold donated items across two storage units and can deliver a full household starter kit within 24 hours of a referral.</p>
       <div class="card-grid">
-        <div class="card"><div class="card-icon"><i class="ti ti-bed"></i></div><h3>Beds & bedding</h3><p>Mattresses, frames, duvets and pillows so a family can sleep safely on night one.</p></div>
-        <div class="card"><div class="card-icon"><i class="ti ti-tools-kitchen-2"></i></div><h3>Kitchen essentials</h3><p>Pots, pans, cutlery, plates — everything needed to cook a first meal at home.</p></div>
-        <div class="card"><div class="card-icon"><i class="ti ti-shirt"></i></div><h3>Clothing & toiletries</h3><p>Clean clothes and personal care items, sorted by size for adults and children.</p></div>
-        <div class="card"><div class="card-icon"><i class="ti ti-sofa"></i></div><h3>Furniture</h3><p>Sofas, tables, chairs — so families have somewhere to sit together.</p></div>
+        <div class="card"><div class="card-icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#5B2D8E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7v10M21 7v10M3 12h18M3 17h18M6 12V9a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v3"/></svg></div><h3>Beds & bedding</h3><p>Mattresses, frames, duvets and pillows so a family can sleep safely on night one.</p></div>
+        <div class="card"><div class="card-icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#5B2D8E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3v6a3 3 0 0 0 6 0V3M9 9v12M18 3v4c0 1.1-.9 2-2 2h-1v8a1 1 0 0 0 2 0v-3h1"/></svg></div><h3>Kitchen essentials</h3><p>Pots, pans, cutlery, plates — everything needed to cook a first meal at home.</p></div>
+        <div class="card"><div class="card-icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#5B2D8E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6l4-3h2a3 3 0 0 0 6 0h2l4 3-3 3v10H6V9L3 6z"/></svg></div><h3>Clothing & toiletries</h3><p>Clean clothes and personal care items, sorted by size for adults and children.</p></div>
+        <div class="card"><div class="card-icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#5B2D8E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="10" width="18" height="7" rx="2"/><path d="M5 10V7a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v3M3 17v2M21 17v2M5 10H3a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h1M19 10h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-1"/></svg></div><h3>Furniture</h3><p>Sofas, tables, chairs — so families have somewhere to sit together.</p></div>
       </div>
     </div>
 
@@ -302,15 +302,15 @@
       <h2>There are many ways you can help</h2>
       <div class="support-grid">
         <a class="support-card" href="#" onclick="showPage('contact')">
-          <div class="support-icon"><i class="ti ti-heart"></i></div>
+          <div class="support-icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="#5B2D8E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
           <div><div class="support-tag tag-money">Cash donation</div><h3>Donate money</h3><p>£10 covers a cutlery set. £50 provides a full bedding pack. £100 equips a complete starter kit for a family starting over.</p></div>
         </a>
         <a class="support-card" href="#" onclick="showPage('contact')">
-          <div class="support-icon"><i class="ti ti-package"></i></div>
+          <div class="support-icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="#5B2D8E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg></div>
           <div><div class="support-tag tag-items">Item donation</div><h3>Donate household items</h3><p>We accept good-condition furniture, beds, kitchen goods, clothing, and toiletries. We collect from Wolverhampton and surrounding areas.</p></div>
         </a>
         <a class="support-card" href="#" onclick="showPage('contact')">
-          <div class="support-icon"><i class="ti ti-building"></i></div>
+          <div class="support-icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="#5B2D8E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><path d="M14 17.5h7M17.5 14v7"/></svg></div>
           <div><div class="support-tag tag-biz">For businesses</div><h3>Business partnership</h3><p>Partner with us through staff fundraising, surplus stock donations, or workplace giving. We provide CSR credentials and a verified partnership certificate.</p></div>
         </a>
       </div>
@@ -339,16 +339,16 @@
       <h2>Trusted by organisations across the region</h2>
       <p class="body-text">We work alongside housing associations, domestic abuse services, local authorities, and community organisations to reach families quickly and effectively.</p>
       <div class="partner-grid">
-        <div class="partner-tile"><i class="ti ti-building-community"></i><div class="pname">Wolverhampton City Council</div><div class="ptype">Local authority</div></div>
-        <div class="partner-tile"><i class="ti ti-home-heart"></i><div class="pname">Wolverhampton Homes</div><div class="ptype">Housing association</div></div>
-        <div class="partner-tile"><i class="ti ti-building-hospital"></i><div class="pname">Royal Wolverhampton NHS</div><div class="ptype">Health trust</div></div>
-        <div class="partner-tile"><i class="ti ti-school"></i><div class="pname">Social Services</div><div class="ptype">Children & families</div></div>
-        <div class="partner-tile"><i class="ti ti-first-aid-kit"></i><div class="pname">British Red Cross</div><div class="ptype">National charity</div></div>
-        <div class="partner-tile"><i class="ti ti-shield-heart"></i><div class="pname">The Haven</div><div class="ptype">DA support service</div></div>
-        <div class="partner-tile"><i class="ti ti-tools-kitchen-2"></i><div class="pname">Friends of Di's Kitchen</div><div class="ptype">Community support</div></div>
-        <div class="partner-tile"><i class="ti ti-wave-sine"></i><div class="pname">W.A.V.E</div><div class="ptype">Community organisation</div></div>
-        <div class="partner-tile"><i class="ti ti-briefcase"></i><div class="pname">Access to Business</div><div class="ptype">Business support</div></div>
-        <div class="partner-tile"><i class="ti ti-droplet-heart"></i><div class="pname">Periods Matter</div><div class="ptype">Community support</div></div>
+        <div class="partner-tile"><div class="partner-initial">WCC</div><div class="pname">Wolverhampton City Council</div><div class="ptype">Local authority</div></div>
+        <div class="partner-tile"><div class="partner-initial">WH</div><div class="pname">Wolverhampton Homes</div><div class="ptype">Housing association</div></div>
+        <div class="partner-tile"><div class="partner-initial">NHS</div><div class="pname">Royal Wolverhampton NHS</div><div class="ptype">Health trust</div></div>
+        <div class="partner-tile"><div class="partner-initial">SS</div><div class="pname">Social Services</div><div class="ptype">Children & families</div></div>
+        <div class="partner-tile"><div class="partner-initial">BRC</div><div class="pname">British Red Cross</div><div class="ptype">National charity</div></div>
+        <div class="partner-tile"><div class="partner-initial">TH</div><div class="pname">The Haven</div><div class="ptype">DA support service</div></div>
+        <div class="partner-tile"><div class="partner-initial">DK</div><div class="pname">Friends of Di's Kitchen</div><div class="ptype">Community support</div></div>
+        <div class="partner-tile"><div class="partner-initial">WAVE</div><div class="pname">W.A.V.E</div><div class="ptype">Community organisation</div></div>
+        <div class="partner-tile"><div class="partner-initial">A2B</div><div class="pname">Access to Business</div><div class="ptype">Business support</div></div>
+        <div class="partner-tile"><div class="partner-initial">PM</div><div class="pname">Periods Matter</div><div class="ptype">Community support</div></div>
       </div>
       <div class="partner-cta-box">
         <p><strong>Want to become a referral partner?</strong> If you work with families experiencing domestic abuse, we'd love to hear from you.</p>
@@ -394,7 +394,7 @@
         <div>
           <div style="font-size:10px;text-transform:uppercase;letter-spacing:0.1em;font-weight:600;color:var(--yellow);margin-bottom:6px;">Prime Minister's Award · March 2024</div>
           <h3 style="font-size:17px;font-weight:600;color:#fff;margin-bottom:8px;">UK's 2,246th Point of Light</h3>
-          <p style="font-size:13px;color:rgba(255,255,255,0.75);line-height:1.65;margin:0 0 10px;">In March 2024, Leanne was honoured with a Points of Light award — recognising inspiring people who make a positive change in their communities. The award was presented by Wolverhampton South West MP Stuart Anderson, who described SAK as <em style="color:rgba(255,255,255,0.85);">"a fantastic addition to the community — recognising the meaningful change that outstanding volunteers such as Leanne are making."</em></p>
+          <p style="font-size:13px;color:rgba(255,255,255,0.75);line-height:1.65;margin:0 0 10px;">In March 2024, Leanne was honoured with a Points of Light award — recognising inspiring people who make a positive change in their communities. The award was presented by Wolverhampton South West MP Stuart Anderson, who described SAOK as <em style="color:rgba(255,255,255,0.85);">"a fantastic addition to the community — recognising the meaningful change that outstanding volunteers such as Leanne are making."</em></p>
           <p style="font-size:13px;color:rgba(255,255,255,0.75);line-height:1.65;margin:0;">Leanne's response was characteristically modest: <em style="color:rgba(255,255,255,0.9);">"I'm still quite surprised. I don't do it for the recognition — I do it because it's needed."</em></p>
         </div>
       </div>
@@ -412,7 +412,7 @@
 
       <div class="label">Community at the heart</div>
       <h2>Volunteers, donors, and the power of giving</h2>
-      <p>SAK is built entirely on the generosity of the Wolverhampton community. Volunteers give their time to organise, collect, and deliver. Donors give clothing, furniture, and household goods that might otherwise have been thrown away. Businesses contribute surplus stock. And many of the families we've helped go on to donate back — items, skills, time — once they're back on their feet.</p>
+      <p>SAOK is built entirely on the generosity of the Wolverhampton community. Volunteers give their time to organise, collect, and deliver. Donors give clothing, furniture, and household goods that might otherwise have been thrown away. Businesses contribute surplus stock. And many of the families we've helped go on to donate back — items, skills, time — once they're back on their feet.</p>
       <p>None of it would be possible without that support. As Leanne says: <strong>"Without everyone supporting, we wouldn't have been able to help the people we have."</strong></p>
 
       <div class="label" style="margin-top:32px;">Why Wolverhampton</div>
