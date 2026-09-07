@@ -35,10 +35,10 @@
     .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
     .nav-logo svg { width: 34px; height: 34px; }
 
-    .nav-links { display: flex; align-items: center; gap: 4px; }
-    .nav-link { font-size: 12px; font-weight: 500; color: var(--text); text-decoration: none; padding: 6px 9px; border-radius: 20px; transition: background 0.15s; }
+    .nav-links { display: flex; align-items: center; gap: 4px; flex-shrink: 0; }
+    .nav-link { font-size: 14px; font-weight: 500; color: var(--text); text-decoration: none; padding: 6px 9px; border-radius: 20px; transition: background 0.15s; }
     .nav-link:hover { background: var(--purple-light); color: var(--purple); }
-    .nav-link.active { color: var(--purple); }
+    .nav-link.active { color: var(--purple); font-weight: 600; }
     .nav-cta { background: var(--purple); color: #fff; font-size: 13px; font-weight: 500; padding: 8px 20px; border-radius: 24px; text-decoration: none; margin-left: 8px; }
     .nav-cta:hover { background: var(--purple-dark); }
 
@@ -279,9 +279,14 @@
       <div class="stat-box"><div class="stat-box-num">2</div><div class="stat-box-label">Storage units stocked and ready</div></div>
     </div>
   </div>
-  <div class="section section-yellow" style="padding:28px 40px;">
+    <div class="section section-yellow">
+    <p class="impact-title">The scale of the problem</p>
     <div class="impact-stats">
       <div class="impact-row"><div class="impact-pct">98%</div><div class="impact-desc">of social housing allocated to domestic abuse survivors has no flooring, no white goods, and no furniture</div></div>
+      <div class="impact-divider"></div>
+      <div class="impact-row"><div class="impact-pct">95%</div><div class="impact-desc">of domestic abuse survivors have experienced financial abuse, leaving them with no funds to provide basic household items</div></div>
+    </div>
+  </div><div class="impact-desc">of social housing allocated to domestic abuse survivors has no flooring, no white goods, and no furniture</div></div>
       <div class="impact-divider"></div>
       <div class="impact-row"><div class="impact-pct">95%</div><div class="impact-desc">of domestic abuse survivors have experienced financial abuse, leaving them with no funds to provide basic household items</div></div>
     </div>
