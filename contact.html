@@ -277,27 +277,69 @@
     </div>
     <div class="section">
       <div class="contact-grid">
-        <div class="contact-card">
-          <h3>I need help or want to make a referral</h3>
-          <p>If you are a survivor, a support worker, housing officer, or social worker looking to refer a family to us, please reach out via Facebook Messenger. We aim to aim to respond within 24 hours.</p>
-          <a href="https://www.facebook.com/simpleactsofkindnesscic" target="_blank" rel="noopener" class="btn-purple">Message us on Facebook →</a>
-        </div>
-        <div class="contact-card">
-          <h3>I want to donate or support</h3>
-          <p>To donate money, arrange a collection of household items, discuss a business partnership, or find out about sponsorship - get in touch and we'll come back to you quickly.</p>
-          <a href="https://www.facebook.com/simpleactsofkindnesscic" target="_blank" rel="noopener" class="btn-purple">Get in touch →</a>
-        </div>
       </div>
-      <div style="margin-top:32px;">
-        <div class="label">Our details</div>
-        <div style="margin-top:20px;display:flex;flex-direction:column;gap:16px;">
-          <div class="contact-detail"><i class="ti ti-map-pin"></i><div><h4>Location</h4><p>Wolverhampton, West Midlands</p></div></div>
-          <div class="contact-detail"><i class="ti ti-brand-facebook"></i><div><h4>Facebook</h4><p><a href="https://www.facebook.com/simpleactsofkindnesscic" target="_blank" rel="noopener" style="color:var(--purple);font-weight:500;">@simpleactsofkindnesscic</a></p></div></div>
-          <div class="contact-detail"><i class="ti ti-clock"></i><div><h4>Response time</h4><p>We aim to respond to all enquiries within 24 hours</p></div></div>
-          <div class="contact-detail"><i class="ti ti-building"></i><div><h4>Registered</h4><p>Simple Acts of Kindness CIC · Registered in England & Wales</p></div></div>
-        </div>
+    </div>
+
+    <!-- CONTACT FORM -->
+    <div class="form-section">
+      <div class="label">Send us a message</div>
+      <h2>Get in touch</h2>
+      <p>Fill in the form below and we will aim to get back to you within 24 hours. If your matter is urgent, please also message us on <a href="https://www.facebook.com/simpleactsofkindnesscic" target="_blank" rel="noopener" style="color:var(--purple);font-weight:500;">Facebook</a>.</p>
+
+      <div class="form-success" id="form-success" style="background:#EAF3DE;border:1px solid #3B6D11;border-radius:8px;padding:16px 20px;display:none;">
+        <p style="font-size:14px;color:#3B6D11;margin:0;font-weight:500;">✓ Thank you for your message - we will be in touch within 24 hours.</p>
       </div>
-      <div class="urgent-box">
+
+      <form class="contact-form" id="contact-form" action="https://formspree.io/f/xnpqgdbb" method="POST">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Your name *</label>
+            <input type="text" id="name" name="name" placeholder="Jane Smith" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email address *</label>
+            <input type="email" id="email" name="email" placeholder="jane@example.com" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="phone">Phone number</label>
+            <input type="tel" id="phone" name="phone" placeholder="07700 000000">
+          </div>
+          <div class="form-group">
+            <label for="reason">Reason for contact *</label>
+            <select id="reason" name="reason" required>
+              <option value="" disabled selected>Please select...</option>
+              <option value="I need help">I need help</option>
+              <option value="Referral from a professional">Referral from a professional</option>
+              <option value="Donate money">I want to donate money</option>
+              <option value="Donate items">I want to donate items</option>
+              <option value="Business partnership">Business partnership</option>
+              <option value="Volunteering">I want to volunteer</option>
+              <option value="Events">Events enquiry</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="message">Your message *</label>
+          <textarea id="message" name="message" placeholder="Tell us a little about how we can help..." required></textarea>
+        </div>
+        <button type="submit" class="form-submit">Send message →</button>
+        <p class="form-note">We aim to respond within 24 hours. Your information is kept confidential and never shared. See our <a href="/privacy.html" style="color:var(--purple);">privacy policy</a>.</p>
+      </form>
+    </div>
+
+    <!-- OTHER WAYS TO REACH US -->
+    <div class="section section-alt">
+      <div class="label">Other ways to reach us</div>
+      <div style="margin-top:20px;display:flex;flex-direction:column;gap:16px;">
+        <div class="contact-detail"><i class="ti ti-map-pin"></i><div><h4>Location</h4><p>Wolverhampton, West Midlands</p></div></div>
+        <div class="contact-detail"><i class="ti ti-brand-facebook"></i><div><h4>Facebook</h4><p><a href="https://www.facebook.com/simpleactsofkindnesscic" target="_blank" rel="noopener" style="color:var(--purple);font-weight:500;">@simpleactsofkindnesscic</a></p></div></div>
+        <div class="contact-detail"><i class="ti ti-clock"></i><div><h4>Response time</h4><p>We aim to respond to all enquiries within 24 hours</p></div></div>
+        <div class="contact-detail"><i class="ti ti-building"></i><div><h4>Registered</h4><p>Simple Acts of Kindness CIC · Registered in England & Wales</p></div></div>
+      </div>
+      <div class="urgent-box" style="margin-top:24px;">
         <h4>⚠ If you are in immediate danger</h4>
         <p>Please call <strong>999</strong> immediately. For the National Domestic Abuse Helpline, call <a href="tel:08082000247">0808 2000 247</a> (free, 24 hours). We are not an emergency service, but we are here to help once you are safe.</p>
       </div>
