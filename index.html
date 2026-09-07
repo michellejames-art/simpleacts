@@ -236,7 +236,7 @@
       <a class="nav-link" href="/" id="nav-home">Home</a>
       <a class="nav-link" href="about.html" id="nav-about">About us</a>
       <a class="nav-link" href="contact.html" id="nav-contact">Contact us</a>
-      <a class="nav-cta" href="https://www.facebook.com/simpleactsofkindnesscic" target="_blank" rel="noopener">Get in touch</a>
+      <a class="nav-cta" href="/contact.html">Get in touch</a>
     </div>
     <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
       <span></span><span></span><span></span>
@@ -246,7 +246,7 @@
     <a href="/">Home</a>
     <a href="about.html">About us</a>
     <a href="contact.html">Contact us</a>
-    <a href="https://www.facebook.com/simpleactsofkindnesscic" target="_blank" rel="noopener" class="mobile-cta">Get in touch</a>
+    <a href="/contact.html" class="mobile-cta">Get in touch</a>
   </div>
 <div class="hero">
       <div class="hero-inner">
@@ -331,9 +331,18 @@
         <div class="sustain-card"><div class="sustain-num">1m</div><div class="sustain-label">Children in the UK without a bed to sleep in</div></div>
       </div>
       <div class="sustain-pillars">
-        <div class="pillar"><i class="ti ti-recycle"></i><h4>Reduce waste</h4><p>Donated items are checked and redistributed - not sent to skip.</p></div>
-        <div class="pillar"><i class="ti ti-truck"></i><h4>Local logistics</h4><p>We serve Wolverhampton, keeping transport miles low.</p></div>
-        <div class="pillar"><i class="ti ti-leaf"></i><h4>Circular giving</h4><p>Businesses donate surplus. Families get what they need. Nothing wasted.</p></div>
+        <div class="pillar">
+          <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#7ecfa0" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" style="display:block;margin:0 auto 10px;"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 .49-3.5"/></svg>
+          <h4>Reduce waste</h4><p>Donated items are checked and redistributed - not sent to skip.</p>
+        </div>
+        <div class="pillar">
+          <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#7ecfa0" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" style="display:block;margin:0 auto 10px;"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z"/><circle cx="12" cy="10" r="3"/></svg>
+          <h4>Local logistics</h4><p>We serve Wolverhampton, keeping transport miles low.</p>
+        </div>
+        <div class="pillar">
+          <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#7ecfa0" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" style="display:block;margin:0 auto 10px;"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></svg>
+          <h4>Circular giving</h4><p>Businesses donate surplus. Families get what they need. Nothing wasted.</p>
+        </div>
       </div>
     </div>
 
@@ -360,7 +369,46 @@
       </div>
     </div>
 
-  
+    <!-- EVENTS SECTION -->
+    <div class="section section-alt">
+      <div class="label">What's on</div>
+      <h2>Upcoming events</h2>
+      <p class="body-text">Join us at one of our upcoming events - from community get-togethers to Christmas gift drives. Everyone is welcome.</p>
+
+      <div style="display:flex;flex-direction:column;gap:14px;margin-bottom:28px;">
+
+        <!-- Cuppa & Connect -->
+        <div style="background:#fff;border:0.5px solid var(--border);border-radius:12px;display:flex;overflow:hidden;">
+          <div style="background:var(--purple);color:#fff;width:70px;flex-shrink:0;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:16px 8px;text-align:center;">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="rgba(255,255,255,0.9)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M17 8h1a4 4 0 0 1 0 8h-1"/><path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V8z"/><line x1="6" y1="2" x2="6" y2="4"/><line x1="10" y1="2" x2="10" y2="4"/><line x1="14" y1="2" x2="14" y2="4"/></svg>
+            <div style="font-size:8px;text-transform:uppercase;letter-spacing:0.06em;margin-top:5px;opacity:0.8;">Weekly</div>
+          </div>
+          <div style="padding:16px 20px;flex:1;">
+            <div style="display:inline-block;font-size:9px;text-transform:uppercase;letter-spacing:0.07em;font-weight:600;padding:2px 8px;border-radius:20px;margin-bottom:6px;background:var(--purple-light);color:var(--purple);">Community</div>
+            <h4 style="font-size:14px;font-weight:600;color:var(--text);margin-bottom:4px;">Cuppa &amp; Connect with Leanne</h4>
+            <p style="font-size:12px;color:var(--muted);line-height:1.55;margin:0 0 8px;">Every Monday until 23rd November - K Teas Cakes, St Georges Parade, Wolverhampton. 11am - 1pm. Come as you are.</p>
+            <a href="/events.html" style="font-size:12px;font-weight:500;color:var(--purple);">Find out more →</a>
+          </div>
+        </div>
+
+        <!-- Christmas Gift Drive -->
+        <div style="background:#fff;border:0.5px solid var(--border);border-radius:12px;display:flex;overflow:hidden;">
+          <div style="background:#9B2C2C;color:#fff;width:70px;flex-shrink:0;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:16px 8px;text-align:center;">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="rgba(255,255,255,0.9)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 12 20 22 4 22 4 12"/><rect x="2" y="7" width="20" height="5"/><path d="M12 22V7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/></svg>
+            <div style="font-size:8px;text-transform:uppercase;letter-spacing:0.06em;margin-top:5px;opacity:0.8;">Xmas</div>
+          </div>
+          <div style="padding:16px 20px;flex:1;">
+            <div style="display:inline-block;font-size:9px;text-transform:uppercase;letter-spacing:0.07em;font-weight:600;padding:2px 8px;border-radius:20px;margin-bottom:6px;background:#FEF0F0;color:#9B2C2C;">Christmas campaign</div>
+            <h4 style="font-size:14px;font-weight:600;color:var(--text);margin-bottom:4px;">Give a Gift &amp; Make a Smile This Christmas</h4>
+            <p style="font-size:12px;color:var(--muted);line-height:1.55;margin:0 0 8px;">Donate a gift for a child this Christmas. Drop off at RAFA Association, 26 Goldthorn Road, Wolverhampton WV2 4PN. Cut-off: 30th November.</p>
+            <a href="/events.html" style="font-size:12px;font-weight:500;color:#9B2C2C;">Find out more →</a>
+          </div>
+        </div>
+
+      </div>
+      <a href="/events.html" class="btn-yellow" style="font-size:13px;padding:10px 22px;">See all events →</a>
+    </div>
+
   <footer>
     <div class="footer-inner">
       <div>
